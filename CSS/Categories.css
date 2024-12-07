@@ -1,0 +1,50 @@
+/* Import the existing CSS file */
+@import url('home.css');
+
+/* Categories Details Section */
+.categories-details {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 15px;
+}
+
+.categories-details h1 {
+    color: var(--dark-blue);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.category-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.category-section {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.category-section h2 {
+    color: var(--dark-blue);
+    border-bottom: 2px solid var(--secondary-blue);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Reuse product grid styles from home.css */
+.category-section .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .category-section .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
